@@ -1,0 +1,39 @@
+PATH
+  remote: .
+  specs:
+    kaomojilist (0.1.0)
+      i18n (= 1.7)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.1.6)
+    diff-lcs (1.3)
+    i18n (1.7.0)
+      concurrent-ruby (~> 1.0)
+    rake (12.3.3)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.1)
+      rspec-support (~> 3.9.1)
+    rspec-expectations (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  kaomojilist!
+  rake (~> 12.0)
+  rspec (~> 3.9)
+
+BUNDLED WITH
+   2.1.4
