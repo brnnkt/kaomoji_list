@@ -1,9 +1,8 @@
 require "kaomoji_list/version"
+require 'yaml'
 
-require 'i18n'
-I18n.load_path += Dir[File.join(__dir__, 'locales', '**/*.yml')]
-I18n.config.available_locales = :kaomoji
-I18n.locale = :kaomoji # ¯\_(ツ)_/¯
+$data = YAML.load_file("#{__dir__}/data/kaomoji.yml");
+$data = $data['kaomoji']
 
 module Kaomoji
   class Error < StandardError; end
@@ -11,26 +10,17 @@ module Kaomoji
   class List
     class << self
       def show_random(emoticon)
-        begin
-          collection = I18n.t(emoticon)
-          return collection.sample
-        rescue
-          return nil
-        end
+        collection = $data[emoticon]
+        return collection.sample
       end
 
       def show_all(emoticon)
-        begin
-          collection = I18n.t(emoticon)
-          return collection
-        rescue
-          return nil
-        end
+        collection = $data[emoticon]
+        return collection
       end
 
       def available_kaomoji_groups
-        data = YAML.load_file("#{__dir__}/locales/kaomoji.yml");
-        return data['kaomoji'].keys
+        return $data.keys
       end
 
     end
