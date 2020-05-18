@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kaomoji_list (0.1.1)
+    kaomoji_list (0.1.2)
 
 GEM
   remote: https://rubygems.org/
