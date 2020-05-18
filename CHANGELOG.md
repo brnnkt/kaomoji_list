@@ -5,5 +5,6 @@
 - Initial kaomoji_list release. (=^･ω･^=)
 
 ## v0.1.2
+## v0.1.3
 
 - Fixed data visibility
