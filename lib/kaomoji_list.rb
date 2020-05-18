@@ -7,7 +7,7 @@ module Kaomoji
   class List
     class << self
       @@data = YAML.load_file("#{__dir__}/data/kaomoji.yml");
-      @@data = $data['kaomoji']
+      @@data = @@data['kaomoji']
 
       def show_random(emoticon)
         collection = @@data[emoticon]
